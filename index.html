@@ -34,7 +34,6 @@
     overflow-x: hidden;
   }
 
-  /* ── DAISY SVG BACKGROUND PATTERN ── */
   body::before {
     content: '';
     position: fixed; inset: 0;
@@ -42,7 +41,6 @@
     pointer-events: none; z-index: 0;
   }
 
-  /* ── FLOATING DAISIES ── */
   .daisy-float {
     position: fixed; pointer-events: none; z-index: 0; opacity: 0.12;
     animation: floatDrift 18s ease-in-out infinite;
@@ -56,7 +54,6 @@
     66% { transform: translateY(10px) rotate(-5deg); }
   }
 
-  /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(253,250,244,0.90);
@@ -85,7 +82,6 @@
   .nav-links a:hover { color: var(--primary); }
   .nav-links a:hover::after { transform: scaleX(1); }
 
-  /* ── HERO ── */
   .hero {
     min-height: 100vh; display: flex; align-items: center;
     padding: 120px 48px 80px;
@@ -166,7 +162,6 @@
   .award-text .t { font-size: 13px; font-weight: 700; color: #a06010; }
   .award-text .s { font-size: 11px; color: var(--muted); margin-top: 3px; }
 
-  /* ── SECTION BASE ── */
   section { padding: 100px 48px; position: relative; }
   .section-inner { max-width: 1100px; margin: 0 auto; }
   .section-label {
@@ -189,7 +184,6 @@
     border-radius: 2px;
   }
 
-  /* ── ABOUT ── */
   #about { background: var(--bg2); }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
   .about-story { font-size: 15px; color: #6b5f54; line-height: 1.95; }
@@ -215,7 +209,6 @@
   .stat-desc .t { font-size: 14px; font-weight: 600; color: var(--text); }
   .stat-desc .s { font-size: 12px; color: var(--muted); margin-top: 2px; }
 
-  /* ── SKILLS ── */
   #skills { background: var(--bg); }
   .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .skill-card {
@@ -253,7 +246,6 @@
   .skill-items li::before { content: '✦'; color: var(--accent); font-size: 9px; }
   .skill-items li:last-child { border-bottom: none; }
 
-  /* ── PROJECTS ── */
   #projects { background: var(--bg2); }
   .project-list { display: flex; flex-direction: column; gap: 28px; }
   .project-card {
@@ -307,7 +299,60 @@
     font-size: 11px; padding: 4px 10px; border-radius: 6px;
   }
 
-  /* ── EXPERIENCE ── */
+  /* ── LIGHTHOUSE 수치 박스 (새로 추가) ── */
+  .lighthouse-section {
+    margin: 20px 0;
+    background: #f8fffe;
+    border: 1px solid rgba(45,122,79,0.2);
+    border-radius: 16px;
+    padding: 20px 24px;
+  }
+  .lighthouse-title {
+    font-size: 12px; font-weight: 700; color: var(--primary);
+    letter-spacing: 1px; text-transform: uppercase;
+    display: flex; align-items: center; gap: 6px;
+    margin-bottom: 16px;
+    font-family: 'DM Mono', monospace;
+  }
+  .lighthouse-compare {
+    display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center;
+    margin-bottom: 16px;
+  }
+  .lh-col { display: flex; flex-direction: column; gap: 8px; }
+  .lh-col-label {
+    font-size: 11px; color: var(--muted); font-weight: 600;
+    letter-spacing: 0.5px; margin-bottom: 4px;
+    font-family: 'DM Mono', monospace;
+  }
+  .lh-arrow {
+    font-size: 20px; color: var(--primary); text-align: center;
+    font-weight: 700;
+  }
+  .lh-row {
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 12px;
+    font-size: 12px;
+  }
+  .lh-row .lh-label { color: var(--muted); font-size: 11px; }
+  .lh-row .lh-score {
+    font-family: 'DM Mono', monospace; font-weight: 700; font-size: 14px;
+  }
+  .lh-score.red   { color: #e53935; }
+  .lh-score.orange { color: #f57c00; }
+  .lh-score.green  { color: #2d7a4f; }
+  .lh-diff {
+    font-size: 11px; font-weight: 700; padding: 2px 6px; border-radius: 4px;
+  }
+  .lh-diff.up   { background: #e8f5ee; color: #2d7a4f; }
+  .lh-diff.down { background: #fdeef1; color: #d45a6a; }
+  .lh-diff.same { background: var(--bg3); color: var(--muted); }
+  .lighthouse-note {
+    font-size: 12px; color: #6b5f54; line-height: 1.6;
+    padding-top: 12px; border-top: 1px solid var(--border);
+    display: flex; gap: 8px; align-items: flex-start;
+  }
+
   #experience { background: var(--bg); }
   .exp-timeline { display: flex; flex-direction: column; gap: 0; position: relative; }
   .exp-timeline::before {
@@ -329,7 +374,6 @@
   .exp-desc { font-size: 13px; color: #6b5f54; line-height: 1.75; }
   .exp-desc li { margin-left: 16px; margin-bottom: 5px; }
 
-  /* ── AWARDS ── */
   #awards { background: var(--bg2); }
   .awards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .award-item {
@@ -344,7 +388,6 @@
   .award-info .org { font-size: 13px; color: var(--muted); }
   .award-info .date { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 8px; }
 
-  /* ── FOOTER ── */
   footer {
     background: var(--bg3); border-top: 1px solid var(--border);
     padding: 48px; text-align: center; position: relative; overflow: hidden;
@@ -360,16 +403,6 @@
   }
   footer .f-sub { font-size: 13px; color: var(--muted); }
 
-  /* ── DIVIDER ── */
-  .section-divider {
-    display: flex; align-items: center; gap: 16px; margin-bottom: 56px;
-    color: var(--muted); font-size: 18px; letter-spacing: 8px; opacity: 0.3;
-  }
-  .section-divider::before, .section-divider::after {
-    content: ''; flex: 1; height: 1px; background: var(--border);
-  }
-
-  /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -383,12 +416,13 @@
     section, .hero { padding-left: 20px; padding-right: 20px; }
     .about-grid, .skills-grid, .awards-grid { grid-template-columns: 1fr; }
     .hero-name { letter-spacing: 3px; }
+    .lighthouse-compare { grid-template-columns: 1fr; }
+    .lh-arrow { transform: rotate(90deg); }
   }
 </style>
 </head>
 <body>
 
-<!-- Floating daisies -->
 <svg class="daisy-float" style="top:6%;right:4%;width:80px;height:80px;" viewBox="0 0 80 80">
   <circle cx="40" cy="40" r="8" fill="#e8a020"/>
   <ellipse cx="40" cy="22" rx="7" ry="14" fill="#2d7a4f" transform="rotate(0 40 40)"/>
@@ -434,7 +468,6 @@
   </div>
 </nav>
 
-<!-- ── HERO ── -->
 <section class="hero" id="home">
   <div class="hero-blob b1"></div>
   <div class="hero-blob b2"></div>
@@ -444,7 +477,7 @@
     </div>
     <div class="hero-name">곽 지 은<br><span>Portfolio</span></div>
     <div class="hero-sub">
-      <strong>데이터 분석 · 머신러닝 · 프론트엔드</strong> 개발자 지망생
+      <strong>프론트엔드</strong> 개발자 지망생
     </div>
     <div class="hero-desc">
       치과 간호조무사로 10년간 헬스케어 현장을 직접 경험한 뒤,<br>
@@ -480,27 +513,17 @@
   </div>
 </section>
 
-<!-- ── ABOUT ── -->
+<!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
     <div class="section-label">01. About Me</div>
     <div class="section-title">나의 이야기</div>
     <div class="about-grid reveal">
       <div class="about-story">
-        <p>
-          10년간 치과에서 간호조무사로 근무하며 환자의 건강 데이터가 어떻게 현장에서 활용되는지 직접 목격했습니다.
-          <strong>의료 현장</strong>을 경험하면서 자연스럽게 "AI가 이 판단을 도울 수 있지 않을까?"라는 질문을 갖게 됐습니다.
-        </p>
-        <p>
-          그 질문을 행동으로 옮겨 AI 헬스케어 부트캠프에 도전했습니다.
-          비전공자로서의 시작이었지만, 현장 경험에서 나온 <span class="highlight">도메인 이해</span>가 데이터를 해석하는 데 큰 강점이 됐습니다.
-        </p>
-        <p>
-          흡연 예측 해커톤에서 여러 앙상블 모델을 직접 비교·실험하고 AutoGluon을 도입해 <span class="highlight">리더보드 1위(AUC 0.763)</span>를 달성하며, 문제를 데이터로 풀어낼 수 있다는 자신감을 얻었습니다.
-        </p>
-        <p>
-          현재는 React 기반 프론트엔드 역량도 쌓으며, 이루도담(AI 복약 관리 서비스) 팀 프로젝트에서 프론트엔드 전체를 설계·구현하는 경험까지 이어가고 있습니다.
-        </p>
+        <p>10년간 치과에서 간호조무사로 근무하며 환자의 건강 데이터가 어떻게 현장에서 활용되는지 직접 목격했습니다. <strong>의료 현장</strong>을 경험하면서 자연스럽게 "AI가 이 판단을 도울 수 있지 않을까?"라는 질문을 갖게 됐습니다.</p>
+        <p>그 질문을 행동으로 옮겨 AI 헬스케어 부트캠프에 도전했습니다. 비전공자로서의 시작이었지만, 현장 경험에서 나온 <span class="highlight">도메인 이해</span>가 데이터를 해석하는 데 큰 강점이 됐습니다.</p>
+        <p>흡연 예측 해커톤에서 여러 앙상블 모델을 직접 비교·실험하고 AutoGluon을 도입해 <span class="highlight">리더보드 1위(AUC 0.763)</span>를 달성하며, 문제를 데이터로 풀어낼 수 있다는 자신감을 얻었습니다.</p>
+        <p>현재는 React 기반 프론트엔드 역량도 쌓으며, 이루도담(AI 복약 관리 서비스) 팀 프로젝트에서 프론트엔드 전체를 설계·구현하는 경험까지 이어가고 있습니다.</p>
       </div>
       <div class="about-stats">
         <div class="stat-card">
@@ -536,7 +559,7 @@
   </div>
 </section>
 
-<!-- ── SKILLS ── -->
+<!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
     <div class="section-label">02. Skills</div>
@@ -578,7 +601,7 @@
         <div class="skill-card-head">
           <span class="skill-emoji">🧠</span>
           <span class="skill-name">Deep Learning</span>
-          <span class="skill-level">학습 중</span>
+          <span class="skill-level">사용 가능</span>
         </div>
         <div class="skill-stars">
           <div class="star on"></div><div class="star on"></div><div class="star off"></div><div class="star off"></div><div class="star off"></div>
@@ -645,7 +668,7 @@
   </div>
 </section>
 
-<!-- ── PROJECTS ── -->
+<!-- PROJECTS -->
 <section id="projects">
   <div class="section-inner">
     <div class="section-label">03. Projects</div>
@@ -659,30 +682,113 @@
           <div>
             <div class="project-badge-wrap">
               <span class="badge fe">🌿 프론트엔드 전담</span>
-              <span class="badge team">팀 프로젝트</span>
-              <span class="badge wip">🔨 진행 중</span>
+              <span class="badge team">팀 프로젝트(4인)</span>
             </div>
             <div class="project-title">이루도담 — AI 복약 관리 서비스</div>
           </div>
           <div class="project-date">2026.03 – 2026.05</div>
         </div>
         <div class="project-desc">
-          처방전 OCR 인식, AI 챗봇 상담(약속이), 복약 관리 기능을 갖춘 헬스케어 웹 서비스.<br>
-          한방/약방 감성의 브랜드 아이덴티티를 담아 프론트엔드 전체를 설계·구현.
+          처방전 OCR·AI 챗봇·복약 관리 기능을 갖춘 헬스케어 웹 서비스에서 프론트엔드 UI 구현을 담당. <br>
+          한방/약방 감성의 브랜드 아이덴티티를 반영한 랜딩페이지 및 주요 화면 개발.
         </div>
         <div class="project-result-box" style="background:var(--rose-light);border-color:rgba(212,90,106,0.2);">
           <div class="result-icon">🌸</div>
           <div class="result-text" style="color:#8b2a3a;">
-            React 19 + TypeScript 기반 프론트엔드 전체 설계 · CSS 디자인 토큰 시스템 구축 · 반응형(모바일) 완전 대응
+            React 19 + TypeScript 기반 프론트엔드 전체 설계 · CSS 디자인 토큰 시스템 구축 · 반응형(모바일) 완전 대응 · pnpm 도입으로 npm 대비 빠른 빌드 환경 구성
           </div>
         </div>
-        <ul class="project-tasks">
-          <li>처방전 OCR 이미지 업로드(드래그&드롭·카메라) + 분석 애니메이션 구현 (파일 검증·자동 리사이즈 포함)</li>
-          <li>AI 챗봇 실시간 타이핑 인디케이터·Collapsible 응답·FAQ 말풍선으로 사용자 경험 향상</li>
-          <li>JWT 토큰 자동 갱신 인터셉터, 카카오 소셜 로그인, ProtectedRoute 인증 라우팅 구현</li>
-          <li>OCR 결과 → sessionStorage → 복약관리 → 마이페이지로 이어지는 데이터 흐름 설계</li>
-          <li>Button·Input·Modal·Loading 공통 컴포넌트 설계 + 패럴랙스 스크롤·IntersectionObserver 애니메이션</li>
-        </ul>
+        <!-- 문제→해결 카드 리스트 -->
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:20px;">
+
+          <div style="background:#fff;border:1px solid rgba(45,122,79,0.15);border-radius:12px;padding:16px 18px;border-left:3px solid #2d7a4f;">
+            <div style="font-size:11px;font-weight:700;color:#2d7a4f;letter-spacing:1px;margin-bottom:8px;font-family:'DM Mono',monospace;">① OCR 로딩 UX 개선</div>
+            <div style="font-size:12px;color:#8a7e72;margin-bottom:4px;"><span style="background:#fdeef1;color:#d45a6a;padding:1px 6px;border-radius:4px;font-weight:600;font-size:11px;margin-right:6px;">문제</span>처방전 분석 API 응답이 느려 사용자가 진행 상태를 알 수 없었음</div>
+            <div style="font-size:12px;color:#6b5f54;"><span style="background:#e8f5ee;color:#2d7a4f;padding:1px 6px;border-radius:4px;font-weight:600;font-size:11px;margin-right:6px;">해결</span>단순 스피너 → 퍼센트 바 + 알약 캐릭터 애니메이션으로 교체, 100% 완료 시 알약이 약통에 입장하는 연출로 대기 지루함 해소</div>
+          </div>
+
+          <div style="background:#fff;border:1px solid rgba(45,122,79,0.15);border-radius:12px;padding:16px 18px;border-left:3px solid #2d7a4f;">
+            <div style="font-size:11px;font-weight:700;color:#2d7a4f;letter-spacing:1px;margin-bottom:8px;font-family:'DM Mono',monospace;">② OCR 결과 유지 (sessionStorage)</div>
+            <div style="font-size:12px;color:#8a7e72;margin-bottom:4px;"><span style="background:#fdeef1;color:#d45a6a;padding:1px 6px;border-radius:4px;font-weight:600;font-size:11px;margin-right:6px;">문제</span>OCR 인식 후 다른 페이지 이동 시 분석 결과가 사라지는 문제 발생</div>
+            <div style="font-size:12px;color:#6b5f54;"><span style="background:#e8f5ee;color:#2d7a4f;padding:1px 6px;border-radius:4px;font-weight:600;font-size:11px;margin-right:6px;">해결</span>sessionStorage에 OCR 결과를 저장해 페이지 이동 후에도 창 닫기 전까지 데이터 유지</div>
+          </div>
+
+          <div style="background:#fff;border:1px solid rgba(45,122,79,0.15);border-radius:12px;padding:16px 18px;border-left:3px solid #2d7a4f;">
+            <div style="font-size:11px;font-weight:700;color:#2d7a4f;letter-spacing:1px;margin-bottom:8px;font-family:'DM Mono',monospace;">③ 챗봇 FAQ 스마트칩</div>
+            <div style="font-size:12px;color:#8a7e72;margin-bottom:4px;"><span style="background:#fdeef1;color:#d45a6a;padding:1px 6px;border-radius:4px;font-weight:600;font-size:11px;margin-right:6px;">문제</span>OCR 인식 후 챗봇과의 연결 흐름이 없어 사용자가 직접 질문을 입력해야 했음</div>
+            <div style="font-size:12px;color:#6b5f54;"><span style="background:#e8f5ee;color:#2d7a4f;padding:1px 6px;border-radius:4px;font-weight:600;font-size:11px;margin-right:6px;">해결</span>'자주 묻는 질문' 스마트칩 버튼에 주의사항·부작용·복용법 등 고정 질문 3종 제공 → 버튼 한 번으로 즉시 답변 가능하도록 UX 개선</div>
+          </div>
+
+          <div style="background:#fff;border:1px solid rgba(45,122,79,0.15);border-radius:12px;padding:16px 18px;border-left:3px solid #2d7a4f;">
+            <div style="font-size:11px;font-weight:700;color:#2d7a4f;letter-spacing:1px;margin-bottom:8px;font-family:'DM Mono',monospace;">④ 복약 추가 후 히스토리 자동 이동</div>
+            <div style="font-size:12px;color:#8a7e72;margin-bottom:4px;"><span style="background:#fdeef1;color:#d45a6a;padding:1px 6px;border-radius:4px;font-weight:600;font-size:11px;margin-right:6px;">문제</span>OCR 분석 후 복약 추가해도 복약히스토리 탭으로 이동되지 않아 사용자가 결과를 확인하기 어려웠음</div>
+            <div style="font-size:12px;color:#6b5f54;"><span style="background:#e8f5ee;color:#2d7a4f;padding:1px 6px;border-radius:4px;font-weight:600;font-size:11px;margin-right:6px;">해결</span>백엔드와 API 흐름 재조율 후 복약 추가 완료 시 마이페이지/복약히스토리로 자동 이동 구현</div>
+          </div>
+
+          <div style="background:#fff;border:1px solid rgba(45,122,79,0.15);border-radius:12px;padding:16px 18px;border-left:3px solid #e8a020;">
+            <div style="font-size:11px;font-weight:700;color:#a06010;letter-spacing:1px;margin-bottom:8px;font-family:'DM Mono',monospace;">⑤ 갤럭시 모바일 레이아웃·다크모드 대응</div>
+            <div style="font-size:12px;color:#8a7e72;margin-bottom:4px;"><span style="background:#fdeef1;color:#d45a6a;padding:1px 6px;border-radius:4px;font-weight:600;font-size:11px;margin-right:6px;">문제</span>갤럭시 절전모드의 강제 다크모드 적용으로 레이아웃 깨짐 및 색상 충돌 발생</div>
+            <div style="font-size:12px;color:#6b5f54;margin-bottom:6px;"><span style="background:#e8f5ee;color:#2d7a4f;padding:1px 6px;border-radius:4px;font-weight:600;font-size:11px;margin-right:6px;">해결</span>CSS 크로스 브라우저 대응으로 강제 라이트 모드 적용 → Lighthouse Accessibility 83 → 93점 (+10) 향상</div>
+          </div>
+
+        </div>
+
+        <!-- ★ 새로 추가된 Lighthouse 수치 섹션 -->
+        <div class="lighthouse-section">
+          <div class="lighthouse-title">
+            🔦 Lighthouse 성능 측정 결과 (Mobile · 개선 전 → 후)
+          </div>
+
+          <!-- 홈페이지 비교 -->
+          <div style="font-size:12px;font-weight:700;color:#8b2a3a;margin-bottom:10px;font-family:'DM Mono',monospace;">
+            📱 홈페이지 — 크로스 브라우저 / 모바일 레이아웃 개선
+          </div>
+          <div class="lighthouse-compare">
+            <div class="lh-col">
+              <div class="lh-col-label">개선 전</div>
+              <div class="lh-row"><span class="lh-label">Performance</span><span class="lh-score orange">56</span></div>
+              <div class="lh-row"><span class="lh-label">Accessibility</span><span class="lh-score orange">83</span></div>
+              <div class="lh-row"><span class="lh-label">Best Practices</span><span class="lh-score green">96</span></div>
+              <div class="lh-row"><span class="lh-label">SEO</span><span class="lh-score orange">83</span></div>
+            </div>
+            <div class="lh-arrow">→</div>
+            <div class="lh-col">
+              <div class="lh-col-label">개선 후</div>
+              <div class="lh-row"><span class="lh-label">Performance</span><span class="lh-score orange">56</span><span class="lh-diff same">—</span></div>
+              <div class="lh-row"><span class="lh-label">Accessibility</span><span class="lh-score green">93</span><span class="lh-diff up">▲ +10</span></div>
+              <div class="lh-row"><span class="lh-label">Best Practices</span><span class="lh-score green">96</span><span class="lh-diff same">—</span></div>
+              <div class="lh-row"><span class="lh-label">SEO</span><span class="lh-score orange">83</span><span class="lh-diff same">—</span></div>
+            </div>
+          </div>
+
+          <!-- 랜딩페이지 비교 -->
+          <div style="font-size:12px;font-weight:700;color:#2d7a4f;margin:16px 0 10px;font-family:'DM Mono',monospace;">
+            🌿 랜딩페이지 — 패럴랙스 스크롤 애니메이션 적용 / 전면 개선
+          </div>
+          <div class="lighthouse-compare">
+            <div class="lh-col">
+              <div class="lh-col-label">개선 전</div>
+              <div class="lh-row"><span class="lh-label">Performance</span><span class="lh-score orange">59</span></div>
+              <div class="lh-row"><span class="lh-label">Accessibility</span><span class="lh-score orange">89</span></div>
+              <div class="lh-row"><span class="lh-label">Best Practices</span><span class="lh-score green">100</span></div>
+              <div class="lh-row"><span class="lh-label">SEO</span><span class="lh-score orange">83</span></div>
+            </div>
+            <div class="lh-arrow">→</div>
+            <div class="lh-col">
+              <div class="lh-col-label">개선 후</div>
+              <div class="lh-row"><span class="lh-label">Performance</span><span class="lh-score orange">56</span><span class="lh-diff down">▼ -3</span></div>
+              <div class="lh-row"><span class="lh-label">Accessibility</span><span class="lh-score green">100</span><span class="lh-diff up">▲ +11 ✨</span></div>
+              <div class="lh-row"><span class="lh-label">Best Practices</span><span class="lh-score green">100</span><span class="lh-diff same">—</span></div>
+              <div class="lh-row"><span class="lh-label">SEO</span><span class="lh-score orange">83</span><span class="lh-diff same">—</span></div>
+            </div>
+          </div>
+
+          <div class="lighthouse-note">
+            <span>💡</span>
+            <span>패럴랙스 애니메이션 적용으로 Performance가 소폭 하락했으나, 접근성(Accessibility) 만점 달성. 크로스 브라우저 대응 작업으로 홈페이지 Accessibility +10점 향상.</span>
+          </div>
+        </div>
+
         <div class="project-stack">
           <span class="stack-tag">React 19</span>
           <span class="stack-tag">TypeScript</span>
@@ -690,10 +796,8 @@
           <span class="stack-tag">React Router v7</span>
           <span class="stack-tag">Axios</span>
           <span class="stack-tag">pnpm</span>
-          <span class="stack-tag">Git</span>          
+          <span class="stack-tag">Git</span>
         </div>
-
-        <!-- ↓ 여기 밖으로 꺼내기 -->
         <a href="https://github.com/AI-HealthCare-02/AI_02_08" target="_blank" style="color:#8b2a3a; font-weight:700; display:flex; align-items:center; gap:6px; margin-top:12px;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
@@ -714,9 +818,7 @@
           </div>
           <div class="project-date">2025.12.31 – 2026.01.02</div>
         </div>
-        <div class="project-desc">
-          헬스케어 검진 데이터를 활용해 흡연 여부를 이진 분류로 예측하는 머신러닝 모델 개발. 헬스케어 2기 전체 참가자 대상 해커톤.
-        </div>
+        <div class="project-desc">헬스케어 검진 데이터를 활용해 흡연 여부를 이진 분류로 예측하는 머신러닝 모델 개발. 헬스케어 2기 전체 참가자 대상 해커톤.</div>
         <div class="project-result-box gold">
           <div class="result-icon">🎯</div>
           <div class="result-text gold-text">최종 리더보드 AUC 0.763 → 전체 1위 달성 (AutoGluon 도입으로 0.744 → 0.763 성능 향상)</div>
@@ -792,7 +894,7 @@
   </div>
 </section>
 
-<!-- ── EXPERIENCE ── -->
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-inner">
     <div class="section-label">04. Experience & Education</div>
@@ -837,7 +939,7 @@
   </div>
 </section>
 
-<!-- ── AWARDS ── -->
+<!-- AWARDS -->
 <section id="awards">
   <div class="section-inner">
     <div class="section-label">05. Awards</div>
@@ -865,13 +967,11 @@
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
 <footer>
   <div class="f-name">곽 지 은</div>
   <div class="f-sub">AI Healthcare Developer · 
-  <a href="https://github.com/wjdtor2-design" target="_blank" 
-     style="color:var(--primary);text-decoration:none;">GitHub</a> · wjdtor2@gamil.com
-</div>
+  <a href="https://github.com/wjdtor2-design" target="_blank" style="color:var(--primary);text-decoration:none;">GitHub</a> · wjdtor2@gmail.com
+  </div>
 </footer>
 
 <script>
